@@ -1,0 +1,61 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host freebsd.org:443 was resolved.
+* IPv6: (none)
+* IPv4: 96.47.72.84
+*   Trying 96.47.72.84:443...
+* Connected to freebsd.org (96.47.72.84) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+} [316 bytes data]
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* (304) (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* (304) (IN), TLS handshake, Unknown (8):
+{ [25 bytes data]
+* (304) (IN), TLS handshake, Certificate (11):
+{ [3480 bytes data]
+* (304) (IN), TLS handshake, CERT verify (15):
+{ [79 bytes data]
+* (304) (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* (304) (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / AEAD-AES256-GCM-SHA384 / [blank] / UNDEF
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: CN=www.freebsd.org
+*  start date: Nov 10 20:54:00 2026 GMT
+*  expire date: Feb  8 20:53:59 2027 GMT
+*  subjectAltName: host "freebsd.org" matched cert's "freebsd.org"
+*  issuer: C=US; O=Let's Encrypt; CN=YE1
+*  SSL certificate verify ok.
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: freebsd.org
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 301 Moved Permanently
+< Server: nginx
+< Content-Type: text/html
+< Content-Length: 162
+< Connection: keep-alive
+< Location: https://www.freebsd.org/
+< Strict-Transport-Security: max-age=31536000
+< X-Content-Type-Options: nosniff
+< X-XSS-Protection: 1; mode=block
+< X-Frame-Options: SAMEORIGIN
+< 
+{ [162 bytes data]
+100   162  100   162    0     0    711      0 --:--:-- --:--:-- --:--:--   710
+* Connection #0 to host freebsd.org left intact
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
